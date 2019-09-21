@@ -33,9 +33,11 @@ public class Main {
 
         for (int i = 0; i < newString.length(); i++) {
             // Update a character in the StringBuilder.
-            newString.setCharAt(i, stringTwo.charAt(i));
+            if (newString.charAt(i) != stringTwo.charAt(i)) {
+                newString.setCharAt(i, stringTwo.charAt(i));
 
-            System.out.println(newString);
+                System.out.println(newString);
+            }
         }
     }
 
